@@ -1,12 +1,13 @@
 # A58Spider
 This is a web spider that scrapes rental houses information from 58.com. This spider solved the custom font anti-spider technology that 58.com uses to hide price and room number.
 
-\- Crawls the listing page only. House detail pages are not included.
-\- Houses without the data of distance to its nearest subway station will be abandoned.
-\- DATA_FILE_PATH in settings points to the folder that is used to store the result.
-\- COMMUNITY_BLACKLIST in settings contains the names of unwanted communities.
-\- SUBWAY_STATION_BLACKLIST in settings contains the names of unwanted subway stations.
-\- MIN_DISTANCE_TO_SUBWAY in settings represents the minimum allowed distance between a house and its nearest subway station. If the distance is greater than this, then the house will be ignored.
+- Crawls the listing page only. House detail pages are not included.
+- Houses without the data of distance to its nearest subway station will be abandoned.
+- DATA_FILE_PATH in settings points to the folder that is used to store the result.
+- COMMUNITY_BLACKLIST in settings contains the names of unwanted communities.
+- SUBWAY_STATION_BLACKLIST in settings contains the names of unwanted subway stations.
+- MIN_DISTANCE_TO_SUBWAY in settings represents the minimum allowed distance between a house and its nearest subway station. If the distance is greater than this, then the house will be ignored.
+- Add your own proxy rotating middleware or change the proxy address in LocalLPMProxyMiddleware before executing it.
 
 
 
@@ -18,3 +19,4 @@ This is a web spider that scrapes rental houses information from 58.com. This sp
 - settings中的COMMUNITY_BLACKLIST存放不想包含在结果中的小区名称
 - settings中的SUBWAY_STATION_BLACKLIST存放不想包含在结果中的地铁站名称
 - settings中的MIN_DISTANCE_TO_SUBWAY代表允许的到地铁站的最小距离，超过此距离的房子会被忽略
+- 运行之前添加自定义的代理服务器中间件或者修改LocalLPMProxyMiddleware中的代理服务器地址
