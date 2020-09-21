@@ -15,6 +15,8 @@ class A58Spider(scrapy.Spider):
     start_urls = ['https://hz.58.com/zufang/0/j1/?minprice=1700_2700&sourcetype=5']
 
     def parse(self, response, **kwargs):
+        # 58.com uses custom fonts to hide price and room count
+        # To extract these data, we need to load the embedded font from the source code first
         font_ttf = re.findall("charset=utf-8;base64,(.*?)'\)", response.text)[0]
         font = TTFont(BytesIO(base64.decodebytes(font_ttf.encode())))
         numbering = font.get('cmap').tables[0].ttFont.get('cmap').tables[0].cmap
