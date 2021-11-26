@@ -1,9 +1,9 @@
 # A58Spider
-This is a web spider that scrapes rental houses information from 58.com. This spider solved the custom font anti-spider technology that 58.com uses to hide price and room number.
+This is a web spider that scrapes rental houses information from 58.com. This spider cracked the custom font anti-spider technology used by 58.com to conceal the price and room number.
 
 - Crawls the listing page only. House detail pages are not included.
-- Houses without the data of distance to its nearest subway station will be abandoned.
-- DATA_FILE_PATH in settings points to the folder that is used to store the result.
+- Houses without the distance to its nearest subway station will be abandoned.
+- DATA_FILE_PATH in settings points to the folder where the result is saved.
 - COMMUNITY_BLACKLIST in settings contains the names of unwanted communities.
 - SUBWAY_STATION_BLACKLIST in settings contains the names of unwanted subway stations.
 - MIN_DISTANCE_TO_SUBWAY in settings represents the minimum allowed distance between a house and its nearest subway station. If the distance is greater than this, then the house will be ignored.
