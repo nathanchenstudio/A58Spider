@@ -1,5 +1,5 @@
 # A58Spider
-This is a web spider that scrapes rental houses information from 58.com. This spider cracked the custom font anti-spider technology used by 58.com to conceal the price and room number.
+This is a Python web spider that scrapes rental houses information from 58.com based on Scrapy. A demonstration of how to crack the custom font anti-spider technology used by 58.com to hide the price and room number.
 
 - Crawls the listing page only. House detail pages are not included.
 - Houses without the distance to its nearest subway station will be abandoned.
